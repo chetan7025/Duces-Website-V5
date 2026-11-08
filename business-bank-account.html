@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,365 +21,77 @@
       --white: #FFFFFF;
       --border-color: #E2E8F0;
     }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      color: var(--text-main);
-      background-color: var(--white);
-      line-height: 1.6;
-    }
-
-    /* Top Bar */
-    .top-bar {
-      background-color: var(--primary);
-      color: var(--white);
-      font-size: 0.85rem;
-      padding: 8px 5%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .top-bar a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    /* Header */
-    header {
-      background: var(--white);
-      border-bottom: 1px solid var(--border-color);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .nav-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 15px 5%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo-text {
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: var(--primary);
-      text-decoration: none;
-      letter-spacing: 0.5px;
-    }
-
-    .logo-text span {
-      color: var(--accent);
-    }
-
-    nav {
-      display: flex;
-      gap: 20px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: var(--text-main);
-      font-weight: 500;
-      font-size: 0.95rem;
-      transition: color 0.2s;
-    }
-
-    nav a:hover {
-      color: var(--accent);
-    }
-
-    /* Page Header Hero */
-    .page-hero {
-      background: linear-gradient(135deg, #0A192F 0%, #172554 100%);
-      color: var(--white);
-      padding: 60px 5%;
-      text-align: center;
-    }
-
-    .page-hero span {
-      color: var(--accent);
-      font-weight: 600;
-      font-size: 0.85rem;
-      letter-spacing: 1px;
-      margin-bottom: 15px;
-      display: block;
-    }
-
-    .page-hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 15px;
-    }
-
-    .page-hero p {
-      color: #CBD5E1;
-      max-width: 700px;
-      margin: 0 auto;
-      font-size: 1.05rem;
-    }
-
-    /* Main Content Layout */
-    .content-section {
-      padding: 80px 5%;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .content-grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 50px;
-      align-items: start;
-    }
-
-    .main-content h2 {
-      font-size: 1.8rem;
-      color: var(--primary);
-      margin-bottom: 20px;
-    }
-
-    .main-content p {
-      color: var(--text-main);
-      margin-bottom: 20px;
-      font-size: 1rem;
-    }
-
-    .requirements-box {
-      background: var(--bg-light);
-      border: 1px solid var(--border-color);
-      border-radius: 10px;
-      padding: 30px;
-      margin-top: 30px;
-      margin-bottom: 30px;
-    }
-
-    .requirements-box h3 {
-      color: var(--primary);
-      font-size: 1.2rem;
-      margin-bottom: 15px;
-    }
-
-    .requirements-list {
-      list-style: none;
-    }
-
-    .requirements-list li {
-      margin-bottom: 12px;
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      color: var(--text-main);
-    }
-
-    .requirements-list li span {
-      color: var(--accent);
-      font-weight: 700;
-    }
-
-    /* Sidebar Card */
-    .sidebar-card {
-      background: var(--bg-light);
-      border: 1px solid var(--border-color);
-      border-radius: 10px;
-      padding: 35px;
-      position: sticky;
-      top: 100px;
-    }
-
-    .sidebar-card h3 {
-      color: var(--primary);
-      font-size: 1.3rem;
-      margin-bottom: 15px;
-    }
-
-    .sidebar-card p {
-      font-size: 0.95rem;
-      color: var(--text-light);
-      margin-bottom: 25px;
-    }
-
-    .btn-primary {
-      display: block;
-      background-color: var(--accent);
-      color: var(--primary);
-      text-align: center;
-      padding: 14px 20px;
-      border-radius: 6px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: opacity 0.2s;
-      margin-bottom: 15px;
-    }
-
-    .btn-primary:hover {
-      opacity: 0.9;
-    }
-
-    .btn-outline {
-      display: block;
-      background: transparent;
-      color: var(--primary);
-      text-align: center;
-      padding: 12px 20px;
-      border-radius: 6px;
-      border: 1px solid var(--border-color);
-      font-weight: 600;
-      text-decoration: none;
-      transition: background 0.2s;
-    }
-
-    .btn-outline:hover {
-      background: var(--white);
-    }
-
-    /* Disclaimer note */
-    .disclaimer-box {
-      background: #FEF3C7;
-      border-left: 4px solid #D97706;
-      padding: 20px;
-      border-radius: 6px;
-      margin-top: 30px;
-      font-size: 0.9rem;
-      color: #92400E;
-    }
-
-    /* Floating WhatsApp */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background-color: #25D366;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 50px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-      font-weight: 600;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      z-index: 1000;
-      transition: transform 0.2s;
-    }
-
-    .whatsapp-float:hover {
-      transform: scale(1.05);
-    }
-
-    /* Footer */
-    footer {
-      background: var(--primary);
-      color: #94A3B8;
-      padding: 60px 5% 20px 5%;
-    }
-
-    .footer-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 40px;
-      margin-bottom: 40px;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-      padding-bottom: 40px;
-    }
-
-    .footer-col h4 {
-      color: var(--white);
-      font-size: 1.1rem;
-      margin-bottom: 15px;
-    }
-
-    .footer-col p {
-      font-size: 0.9rem;
-      margin-bottom: 15px;
-    }
-
-    .footer-col a {
-      display: block;
-      color: #94A3B8;
-      text-decoration: none;
-      margin-bottom: 10px;
-      font-size: 0.9rem;
-    }
-
-    .footer-col a:hover {
-      color: var(--white);
-    }
-
-    .footer-bottom {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.85rem;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .footer-bottom a {
-      color: #94A3B8;
-      text-decoration: none;
-    }
-
-    /* Responsive */
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
+    body { color: var(--text-main); background-color: var(--white); line-height: 1.6; }
+    .top-bar { background-color: var(--primary); color: var(--white); font-size: 0.85rem; padding: 8px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+    .top-bar a { color: var(--accent); text-decoration: none; }
+    header { background: var(--white); border-bottom: 1px solid var(--border-color); position: sticky; top: 0; z-index: 1000; }
+    .nav-container { max-width: 1200px; margin: 0 auto; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; }
+    .logo-text { font-size: 1.4rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+    .logo-text span { color: var(--accent); }
+    nav { display: flex; gap: 20px; align-items: center; }
+    nav a { text-decoration: none; color: var(--text-main); font-weight: 500; font-size: 0.95rem; transition: color 0.2s; }
+    nav a:hover { color: var(--accent); }
+    .page-hero { background: linear-gradient(135deg, #0A192F 0%, #172554 100%); color: var(--white); padding: 60px 5%; text-align: center; }
+    .page-hero span { color: var(--accent); font-weight: 600; font-size: 0.85rem; letter-spacing: 1px; margin-bottom: 15px; display: block; }
+    .page-hero h1 { font-size: 2.5rem; margin-bottom: 15px; }
+    .page-hero p { color: #CBD5E1; max-width: 700px; margin: 0 auto; font-size: 1.05rem; }
+    .content-section { padding: 80px 5%; max-width: 1200px; margin: 0 auto; }
+    .content-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 50px; align-items: start; }
+    .main-content h2 { font-size: 1.8rem; color: var(--primary); margin-bottom: 20px; }
+    .main-content p { color: var(--text-main); margin-bottom: 20px; font-size: 1rem; }
+    .requirements-box { background: var(--bg-light); border: 1px solid var(--border-color); border-radius: 10px; padding: 30px; margin: 30px 0; }
+    .requirements-box h3 { color: var(--primary); font-size: 1.2rem; margin-bottom: 15px; }
+    .requirements-list { list-style: none; }
+    .requirements-list li { margin-bottom: 12px; display: flex; align-items: flex-start; gap: 12px; }
+    .requirements-list li span { color: var(--accent); font-weight: 700; }
+    .sidebar-card { background: var(--bg-light); border: 1px solid var(--border-color); border-radius: 10px; padding: 35px; position: sticky; top: 100px; }
+    .sidebar-card h3 { color: var(--primary); font-size: 1.3rem; margin-bottom: 15px; }
+    .sidebar-card p { font-size: 0.95rem; color: var(--text-light); margin-bottom: 25px; }
+    .btn-primary { display: block; background-color: var(--accent); color: var(--primary); text-align: center; padding: 14px 20px; border-radius: 6px; font-weight: 600; text-decoration: none; margin-bottom: 15px; }
+    .btn-outline { display: block; background: transparent; color: var(--primary); text-align: center; padding: 12px 20px; border-radius: 6px; border: 1px solid var(--border-color); font-weight: 600; text-decoration: none; }
+    .disclaimer-box { background: #FEF3C7; border-left: 4px solid #D97706; padding: 20px; border-radius: 6px; margin-top: 30px; font-size: 0.9rem; color: #92400E; }
+    .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background-color: #25D366; color: white; padding: 12px 20px; border-radius: 50px; display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 600; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 1000; }
+    footer { background: var(--primary); color: #94A3B8; padding: 60px 5% 20px 5%; }
+    .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 40px; }
+    .footer-col h4 { color: var(--white); font-size: 1.1rem; margin-bottom: 15px; }
+    .footer-col p { font-size: 0.9rem; margin-bottom: 15px; }
+    .footer-col a { display: block; color: #94A3B8; text-decoration: none; margin-bottom: 10px; font-size: 0.9rem; }
+    .footer-bottom { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; font-size: 0.85rem; }
+    .footer-bottom a { color: #94A3B8; text-decoration: none; }
     @media (max-width: 900px) {
-      .content-grid, .footer-container {
-        grid-template-columns: 1fr;
-      }
-      .page-hero h1 {
-        font-size: 2rem;
-      }
-      nav {
-        display: none;
-      }
+      .content-grid, .footer-container { grid-template-columns: 1fr; }
+      .page-hero h1 { font-size: 2rem; }
+      nav { display: none; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Top Announcement Bar -->
   <div class="top-bar">
     <span>BUSINESS BANKING · BUSINESS SETUP · CORPORATE SERVICES</span>
     <a href="mailto:chetanpatil.2798@gmail.com">chetanpatil.2798@gmail.com</a>
   </div>
 
-  <!-- Header -->
   <header>
     <div class="nav-container">
       <a href="index.html" class="logo-text">DUCES <span>Consultancy</span></a>
       <nav aria-label="Main navigation">
         <a href="index.html">Home</a>
-        <a href="index.html#services">Services</a>
-        <a href="https://wa.me/971505356966" target="_blank" rel="noopener">Contact WhatsApp</a>
+        <a href="business-setup.html">Business Setup</a>
+        <a href="https://wa.me/971505356966" target="_blank" rel="noopener">WhatsApp Us</a>
       </nav>
     </div>
   </header>
 
-  <!-- Page Hero -->
   <section class="page-hero">
     <span>BANKING & FINANCE</span>
     <h1>Business Bank Account Support</h1>
     <p>Navigate UAE corporate banking requirements with transparent preparation, documentation organization, and application coordination.</p>
   </section>
 
-  <!-- Content Section -->
   <section class="content-section">
     <div class="content-grid">
-      
-      <!-- Main Article Content -->
       <div class="main-content">
         <h2>Preparing Your Business for Its Banking Journey</h2>
         <p>Securing a corporate bank account in the UAE requires careful preparation. Financial institutions evaluate your company profile, business activity, shareholder background, and expected transaction flows before approving an account.</p>
@@ -395,8 +108,6 @@
         </div>
 
         <h2>Our Step-by-Step Coordination Process</h2>
-        <p>We work with you through a structured 4-stage process to ensure your application is comprehensive and presented clearly to banking relationship managers:</p>
-        
         <p><strong>1. Initial Understanding:</strong> We discuss your business structure, activity type, and banking preferences to select suitable financial institutions.<br>
         <strong>2. Requirement Review:</strong> We outline the specific documentation checklist relevant to your unique company profile.<br>
         <strong>3. Application Coordination:</strong> We assist in formatting and submitting your application package to the chosen provider.<br>
@@ -407,23 +118,19 @@
         </div>
       </div>
 
-      <!-- Sidebar Card -->
       <div class="sidebar-card">
         <h3>Discuss Your Banking Needs</h3>
         <p>Speak directly with our team to review your corporate structure and prepare your banking documentation.</p>
         <a href="https://wa.me/971505356966" class="btn-primary" target="_blank" rel="noopener">Chat on WhatsApp</a>
         <a href="mailto:chetanpatil.2798@gmail.com" class="btn-outline">Send an Email</a>
       </div>
-
     </div>
   </section>
 
-  <!-- Sticky WhatsApp Floating Button -->
   <a href="https://wa.me/971505356966" class="whatsapp-float" target="_blank" rel="noopener">
     <span>💬 WhatsApp Us</span>
   </a>
 
-  <!-- Footer -->
   <footer>
     <div class="footer-container">
       <div class="footer-col">
@@ -432,9 +139,8 @@
       </div>
       <div class="footer-col">
         <h4>Explore</h4>
-        <a href="index.html#services">Banking & Finance</a>
-        <a href="index.html#services">Business Setup</a>
-        <a href="index.html#services">Accounting & Tax</a>
+        <a href="index.html">Home</a>
+        <a href="business-setup.html">Business Setup</a>
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
