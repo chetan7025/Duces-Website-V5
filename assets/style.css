@@ -1,586 +1,341 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DUCES Consultancy Services | Business Setup & Banking UAE</title>
-  <link rel="canonical" href="https://chetan7025.github.io/Duces-Website-V4/">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
-  <style>
-    :root {
-      --primary: #0A192F;
-      --primary-light: #1E3A8A;
-      --accent: #C5A059;
-      --text-main: #334155;
-      --text-light: #64748B;
-      --bg-light: #F8FAFC;
-      --white: #FFFFFF;
-      --border-color: #E2E8F0;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      color: var(--text-main);
-      background-color: var(--white);
-      line-height: 1.6;
-    }
-
-    /* Top Bar */
-    .top-bar {
-      background-color: var(--primary);
-      color: var(--white);
-      font-size: 0.85rem;
-      padding: 8px 5%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .top-bar a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    /* Header */
-    header {
-      background: var(--white);
-      border-bottom: 1px solid var(--border-color);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .nav-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 15px 5%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo-text {
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: var(--primary);
-      text-decoration: none;
-      letter-spacing: 0.5px;
-    }
-
-    .logo-text span {
-      color: var(--accent);
-    }
-
-    nav {
-      display: flex;
-      gap: 20px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: var(--text-main);
-      font-weight: 500;
-      font-size: 0.95rem;
-      transition: color 0.2s;
-    }
-
-    nav a:hover {
-      color: var(--accent);
-    }
-
-    /* Hero Section */
-    .hero {
-      background: linear-gradient(135deg, #0A192F 0%, #172554 100%);
-      color: var(--white);
-      padding: 80px 5%;
-    }
-
-    .hero-grid {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-      align-items: center;
-    }
-
-    .hero-tag {
-      color: var(--accent);
-      font-weight: 600;
-      font-size: 0.85rem;
-      letter-spacing: 1px;
-      margin-bottom: 15px;
-      display: block;
-    }
-
-    .hero h1 {
-      font-size: 2.8rem;
-      line-height: 1.2;
-      margin-bottom: 20px;
-    }
-
-    .hero h1 span {
-      color: #93C5FD;
-      display: block;
-    }
-
-    .hero p {
-      color: #CBD5E1;
-      margin-bottom: 30px;
-      font-size: 1.05rem;
-    }
-
-    .hero-buttons {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    .btn-primary {
-      background-color: var(--accent);
-      color: var(--primary);
-      padding: 14px 28px;
-      border-radius: 6px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: opacity 0.2s;
-    }
-
-    .btn-primary:hover {
-      opacity: 0.9;
-    }
-
-    .btn-secondary {
-      background: transparent;
-      color: var(--white);
-      border: 1px solid rgba(255,255,255,0.3);
-      padding: 14px 28px;
-      border-radius: 6px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: border-color 0.2s;
-    }
-
-    .btn-secondary:hover {
-      border-color: var(--white);
-    }
-
-    .hero-card-box {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      padding: 40px;
-      border-radius: 12px;
-      backdrop-filter: blur(10px);
-    }
-
-    .hero-card-box h3 {
-      color: var(--accent);
-      font-size: 1.3rem;
-      margin-bottom: 15px;
-    }
-
-    .hero-card-box ul {
-      list-style: none;
-      color: #E2E8F0;
-    }
-
-    .hero-card-box li {
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    /* Trust Bar */
-    .trust-bar {
-      background-color: var(--bg-light);
-      border-bottom: 1px solid var(--border-color);
-      padding: 25px 5%;
-    }
-
-    .trust-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-around;
-      text-align: center;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .trust-item strong {
-      display: block;
-      font-size: 1.2rem;
-      color: var(--primary);
-    }
-
-    .trust-item span {
-      font-size: 0.85rem;
-      color: var(--text-light);
-    }
-
-    /* Services Section */
-    .services-section {
-      background-color: var(--bg-light);
-      padding: 80px 5%;
-    }
-
-    .section-header {
-      max-width: 1200px;
-      margin: 0 auto 50px auto;
-      text-align: center;
-    }
-
-    .section-header p {
-      color: var(--accent);
-      font-weight: 700;
-      font-size: 0.85rem;
-      letter-spacing: 1px;
-      margin-bottom: 10px;
-    }
-
-    .section-header h2 {
-      font-size: 2.2rem;
-      color: var(--primary);
-    }
-
-    .services-grid {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-    }
-
-    .service-card {
-      background: var(--white);
-      padding: 35px;
-      border-radius: 10px;
-      border: 1px solid var(--border-color);
-      transition: transform 0.2s;
-    }
-
-    .service-card:hover {
-      transform: translateY(-4px);
-    }
-
-    .service-card span {
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--accent);
-      display: block;
-      margin-bottom: 15px;
-    }
-
-    .service-card h3 {
-      font-size: 1.3rem;
-      margin-bottom: 15px;
-      color: var(--primary);
-    }
-
-    .service-card p {
-      color: var(--text-light);
-      margin-bottom: 20px;
-      font-size: 0.95rem;
-    }
-
-    /* Testimonials Section */
-    .testimonials-section {
-      padding: 80px 5%;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 30px;
-    }
-
-    .testimonial-card {
-      background: var(--bg-light);
-      padding: 30px;
-      border-radius: 10px;
-      border-left: 4px solid var(--accent);
-      border-top: 1px solid var(--border-color);
-      border-right: 1px solid var(--border-color);
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    .testimonial-card p {
-      font-style: italic;
-      color: var(--text-main);
-      margin-bottom: 20px;
-    }
-
-    .testimonial-card strong {
-      display: block;
-      color: var(--primary);
-    }
-
-    .testimonial-card small {
-      color: var(--text-light);
-    }
-
-    /* Floating WhatsApp */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background-color: #25D366;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 50px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-      font-weight: 600;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      z-index: 1000;
-      transition: transform 0.2s;
-    }
-
-    .whatsapp-float:hover {
-      transform: scale(1.05);
-    }
-
-    /* Footer */
-    footer {
-      background: var(--primary);
-      color: #94A3B8;
-      padding: 60px 5% 20px 5%;
-    }
-
-    .footer-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 40px;
-      margin-bottom: 40px;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-      padding-bottom: 40px;
-    }
-
-    .footer-col h4 {
-      color: var(--white);
-      font-size: 1.1rem;
-      margin-bottom: 15px;
-    }
-
-    .footer-col p {
-      font-size: 0.9rem;
-      margin-bottom: 15px;
-    }
-
-    .footer-col a {
-      display: block;
-      color: #94A3B8;
-      text-decoration: none;
-      margin-bottom: 10px;
-      font-size: 0.9rem;
-    }
-
-    .footer-col a:hover {
-      color: var(--white);
-    }
-
-    .footer-bottom {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.85rem;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .footer-bottom a {
-      color: #94A3B8;
-      text-decoration: none;
-    }
-
-    /* Responsive */
-    @media (max-width: 900px) {
-      .hero-grid, .services-grid, .testimonials-grid, .footer-container {
-        grid-template-columns: 1fr;
-      }
-      .hero h1 {
-        font-size: 2.2rem;
-      }
-      nav {
-        display: none;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Top Announcement Bar -->
-  <div class="top-bar">
-    <span>BUSINESS BANKING · BUSINESS SETUP · CORPORATE SERVICES</span>
-    <a href="mailto:chetanpatil.2798@gmail.com">chetanpatil.2798@gmail.com</a>
-  </div>
-
-  <!-- Header -->
-  <header>
-    <div class="nav-container">
-      <a href="index.html" class="logo-text">DUCES <span>Consultancy</span></a>
-      <nav aria-label="Main navigation">
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="https://wa.me/971505356966" target="_blank" rel="noopener">Contact WhatsApp</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-      <div class="hero-grid">
-        <div>
-          <span class="hero-tag">BUSINESS. BANKING. BEYOND.</span>
-          <h1>Build Your Business. <span>Move Forward With Clarity.</span></h1>
-          <p>Practical guidance and coordinated support for important business decisions in the UAE — from banking and finance to company setup, taxation and corporate services.</p>
-          <div class="hero-buttons">
-            <a href="https://wa.me/971505356966" class="btn-primary" target="_blank" rel="noopener">Talk on WhatsApp</a>
-            <a href="#services" class="btn-secondary">Explore Services</a>
-          </div>
-        </div>
-        <div class="hero-card-box">
-          <h3>Why Choose DUCES?</h3>
-          <ul>
-            <li>✔ UAE Mainland & Free Zone Expertise</li>
-            <li>✔ Transparent & Realistic Guidance</li>
-            <li>✔ Single Point of Contact for All Needs</li>
-            <li>✔ End-to-End Documentation Support</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Trust Bar -->
-    <div class="trust-bar">
-      <div class="trust-container">
-        <div class="trust-item">
-          <strong>Strategic Jurisdictions</strong>
-          <span>Mainland & Free Zones</span>
-        </div>
-        <div class="trust-item">
-          <strong>Transparent Approach</strong>
-          <span>No Unrealistic Guarantees</span>
-        </div>
-        <div class="trust-item">
-          <strong>Coordinated Support</strong>
-          <span>Banking, Tax & Setup</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Services Section -->
-    <section class="services-section" id="services">
-      <div class="section-header">
-        <p>OUR SERVICES</p>
-        <h2>Support Across Your Business Journey</h2>
-      </div>
-      <div class="services-grid">
-        <article class="service-card">
-          <span>01 / BANKING</span>
-          <h3>Business Banking</h3>
-          <p>Guidance on business account requirements, documentation and application coordination with financial institutions.</p>
-        </article>
-        <article class="service-card">
-          <span>02 / FINANCE</span>
-          <h3>Business Finance</h3>
-          <p>Initial requirement assessment and coordination for suitable business loans, property finance and payment solutions.</p>
-        </article>
-        <article class="service-card">
-          <span>03 / FORMATION</span>
-          <h3>Business Setup</h3>
-          <p>Company formation planning, jurisdiction options (Mainland & Free Zone), and setup documentation support.</p>
-        </article>
-        <article class="service-card">
-          <span>04 / COMPLIANCE</span>
-          <h3>Accounting & Bookkeeping</h3>
-          <p>Bookkeeping coordination and accounting support for organised and compliant financial records.</p>
-        </article>
-        <article class="service-card">
-          <span>05 / TAX</h3>
-          <h3>VAT & Corporate Tax</h3>
-          <p>Support for understanding tax registration, filing schedules, and compliance requirements in the UAE.</p>
-        </article>
-        <article class="service-card">
-          <span>06 / CORPORATE</span>
-          <h3>PRO & Visa Services</h3>
-          <p>Coordination support for government documentation, visa processes, and corporate formalities.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials-section" id="testimonials">
-      <div class="section-header">
-        <p>CLIENT EXPERIENCES</p>
-        <h2>Trusted Advice & Clear Communication</h2>
-      </div>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <p>"DUCES provided exceptionally straightforward guidance on our corporate structure. No hidden fees or unrealistic promises—just clear expectations."</p>
-          <strong>Managing Director</strong>
-          <small>Free Zone Startup, Dubai</small>
-        </div>
-        <div class="testimonial-card">
-          <p>"Their help with organizing our banking documentation saved us weeks of back-and-forth. Highly professional approach to corporate compliance."</p>
-          <strong>Operations Head</strong>
-          <small>Trading Company, UAE</small>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Sticky WhatsApp Floating Button -->
-  <a href="https://wa.me/971505356966" class="whatsapp-float" target="_blank" rel="noopener">
-    <span>💬 WhatsApp Us</span>
-  </a>
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-container">
-      <div class="footer-col">
-        <h4>DUCES Consultancy Services</h4>
-        <p>Business banking, setup and corporate consultancy support in the UAE with an emphasis on clarity and transparency.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Explore</h4>
-        <a href="#services">Banking & Finance</a>
-        <a href="#services">Business Setup</a>
-        <a href="#services">Accounting & Tax</a>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <a href="mailto:chetanpatil.2798@gmail.com">chetanpatil.2798@gmail.com</a>
-        <a href="https://wa.me/971505356966">+971 50 535 6966</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© DUCES Consultancy Services. All rights reserved.</span>
-      <a href="#">Privacy Policy</a>
-    </div>
-  </footer>
-
-</body>
-</html>
+:root {
+  --primary: #0A192F;
+  --primary-light: #1E3A8A;
+  --accent: #C5A059;
+  --text-main: #334155;
+  --text-light: #64748B;
+  --bg-light: #F8FAFC;
+  --white: #FFFFFF;
+  --border-color: #E2E8F0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--text-main);
+  background-color: var(--white);
+  line-height: 1.6;
+}
+
+/* Top Announcement Bar */
+.top-bar {
+  background-color: var(--primary);
+  color: var(--white);
+  font-size: 0.85rem;
+  padding: 8px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.top-bar a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* Header & Navigation */
+header {
+  background: var(--white);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-text {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+.logo-text span {
+  color: var(--accent);
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+.nav-cta {
+  background-color: var(--primary);
+  color: var(--white) !important;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #0A192F 0%, #172554 100%);
+  color: var(--white);
+  padding: 80px 5%;
+}
+
+.hero-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.hero-tag {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: #93C5FD;
+  display: block;
+}
+
+.hero p {
+  color: #CBD5E1;
+  margin-bottom: 30px;
+  font-size: 1.05rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  color: var(--primary);
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--white);
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-color 0.2s;
+}
+
+.btn-secondary:hover {
+  border-color: var(--white);
+}
+
+.hero-trust-badges {
+  display: flex;
+  gap: 20px;
+  font-size: 0.85rem;
+  color: #94A3B8;
+}
+
+.hero-trust-badges span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--white);
+  font-weight: 500;
+}
+
+/* Hero Form Box */
+.hero-form-box {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 12px;
+  color: var(--text-main);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+.hero-form-box h3 {
+  color: var(--primary);
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.hero-form-box p {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: var(--primary);
+}
+
+.form-group select, .form-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.btn-full {
+  width: 100%;
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-full:hover {
+  background-color: var(--primary-light);
+}
+
+/* Trust Bar */
+.trust-bar {
+  background-color: var(--bg-light);
+  border-bottom: 1px solid var(--border-color);
+  padding: 30px 5%;
+}
+
+.trust-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  gap: 20px;
+}
+
+.trust-item strong {
+  display: block;
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+.trust-item span {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+/* Packages Section */
+.packages-section {
+  padding: 80px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-header p {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.section-header h2 {
+  font-size: 2.2rem;
+  color: var(--primary);
+}
+
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.package-card {
+  background: var(--bg-light);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 35px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.package-card.featured {
+  background: var(--white);
+  border: 2px solid var(--accent);
+  box-shadow: 0 10px 25px rgba(197, 160, 89, 0.15);
+}
+
+.badge-popular {
+  position: absolute;
+  top: -12px;
+  right: 25px;
+  background-color: var(--accent);
+  color: var(--primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.package-card h3 {
+  font-size: 1.2rem;
+  color: var(--primary);
+  margin-bottom: 10
